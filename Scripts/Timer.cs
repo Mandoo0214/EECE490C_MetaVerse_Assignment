@@ -28,7 +28,7 @@ public class Timer : MonoBehaviour
         else
         {
             //timesUpText.SetActive(true);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
     }
 }
