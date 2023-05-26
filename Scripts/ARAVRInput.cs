@@ -431,4 +431,8 @@ class CoroutineInstance : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 814eb2a8f980ff5980bb8909402dd30ba94ee5b2
