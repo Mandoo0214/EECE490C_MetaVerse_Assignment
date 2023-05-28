@@ -34,7 +34,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(DestroyRice);
 
-            Instantiate(Tuna, new Vector3(gameflow.plateXpos, 1, 0), Tuna.transform.rotation);
+            Instantiate(Tuna, new Vector3((float)-0.1820519, (float)0.19559834, gameflow.plateZpos), Tuna.transform.rotation);
         }
 
         if (col.gameObject.name == "Ebi_sashimi(Clone)")
@@ -42,7 +42,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(DestroyRice);
 
-            Instantiate(Ebi, new Vector3(gameflow.plateXpos, 1, 0), Ebi.transform.rotation);
+            Instantiate(Ebi, new Vector3((float)-0.1820519, (float)0.19559834, gameflow.plateZpos), Ebi.transform.rotation);
         }
 
         if (col.gameObject.name == "Squid_sashimi(Clone)")
@@ -50,7 +50,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(DestroyRice);
 
-            Instantiate(Squid, new Vector3(gameflow.plateXpos, 1, 0), Squid.transform.rotation);
+            Instantiate(Squid, new Vector3((float)-0.1820519, (float)0.19559834, gameflow.plateZpos), Squid.transform.rotation);
         }
 
         if (col.gameObject.name == "Kohada_sashimi(Clone)")
@@ -58,7 +58,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(DestroyRice);
 
-            Instantiate(Kohada, new Vector3(gameflow.plateXpos, 1, 0), Kohada.transform.rotation);
+            Instantiate(Kohada, new Vector3((float)-0.1820519, (float)0.19559834, gameflow.plateZpos), Kohada.transform.rotation);
         }
 
         if (col.gameObject.name == "Salmon_sashimi(Clone)")
@@ -66,7 +66,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(col.gameObject);
             Destroy(DestroyRice);
 
-            Instantiate(Salmon, new Vector3(gameflow.plateXpos, 1, 0), Salmon.transform.rotation);
+            Instantiate(Salmon, new Vector3((float)-0.1820519, (float)0.19559834, gameflow.plateZpos), Salmon.transform.rotation);
         }
     }
 }

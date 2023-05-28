@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3822272386673814624}
   m_LocalRotation: {x: -0.5076328, y: -0.4958962, z: -0.4982818, w: 0.49810767}
   m_LocalPosition: {x: -3.5986378, y: -0.003149785, z: -3.1422184}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3822272386673814624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46cb8c55a174a144b85e0e3fc33d951e, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e694b0a46bb3ab47ac88f89b6815e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Squid: {fileID: 3161441923747847733, guid: b91b4fe7ac1fea146897afd41d2c5bcd, type: 3}

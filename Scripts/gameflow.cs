@@ -10,7 +10,7 @@ public class gameflow : MonoBehaviour
     private int [] randomOrder= { 0, 0, 0 };
 
     public static int plateNum = 0;
-    public static float plateXpos = -4;
+    public static float plateZpos = (float)0.229;
 
     public Transform plateSelector;
 
@@ -94,12 +94,12 @@ public class gameflow : MonoBehaviour
         if(Input.GetKeyDown("tab"))
         {
             plateNum += 1;
-            plateXpos += 4;
+            plateZpos -= (float)0.5;
 
             if(plateNum>2)
             {
                 plateNum = 0;
-                plateXpos = -4;
+                plateZpos = (float)0.229;
             }
         }
 
@@ -107,6 +107,6 @@ public class gameflow : MonoBehaviour
         orderTimer[1] -= Time.deltaTime;
         orderTimer[2] -= Time.deltaTime;
 
-        plateSelector.transform.position = new Vector3(plateXpos, 0,0);
+        plateSelector.transform.position = new Vector3((float)-2.610, (float)1.657, plateZpos);
     }
 }

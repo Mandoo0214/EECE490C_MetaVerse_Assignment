@@ -22,22 +22,34 @@ public class clickplace : MonoBehaviour
     private void OnMouseDown()
     {
         if (gameObject.name == "Rice_button")
-            Instantiate(cloneObj, new Vector3(gameflow.plateXpos, 5, 0), cloneObj.rotation);
+        {
+            Instantiate(cloneObj, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
+            Debug.Log("I will make Rice!!");
+        }
 
         if (gameObject.name == "Ebi_button")
-            Instantiate(cloneObj, new Vector3(gameflow.plateXpos, 5, 0), cloneObj.rotation);
+        {
+            Instantiate(cloneObj, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
+            Debug.Log("I will make Ebi!");
+        }
 
         if (gameObject.name == "Salmon_button")
-            Instantiate(cloneObj, new Vector3(gameflow.plateXpos, 5, 0), cloneObj.rotation);
+        {
+            Instantiate(cloneObj, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
+            Debug.Log("I will make Salmon!!");
+        }
 
         if (gameObject.name == "Tuna_button")
-            Instantiate(cloneObj, new Vector3(gameflow.plateXpos, 5, 0), cloneObj.rotation);
+        {
+            Instantiate(cloneObj, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
+            Debug.Log("I will make Tuna!");
+        }
 
         if (gameObject.name == "Kohada_button")
-            Instantiate(cloneObj, new Vector3(gameflow.plateXpos, 5, 0), cloneObj.rotation);
+            Instantiate(cloneObj, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
 
         if (gameObject.name == "Squid_button")
-            Instantiate(cloneObj, new Vector3(gameflow.plateXpos, 5, 0), cloneObj.rotation);
+            Instantiate(cloneObj, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
 
         gameflow.plateValue[gameflow.plateNum] += foodValue;
         Debug.Log(gameflow.plateNum+ " "+gameflow.plateValue[gameflow.plateNum] + " " + gameflow.orderValue[gameflow.plateNum]);
