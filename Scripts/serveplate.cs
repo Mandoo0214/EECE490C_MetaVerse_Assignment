@@ -32,9 +32,6 @@ public class serveplate : MonoBehaviour
 
             if(gameflow.plateValue[gameflow.plateNum]==110000)
             {
-                Destroywrong= GameObject.Find("Sushi_Shrimp Variant(Clone)");
-                Destroy(Destroywrong, 1f);
-
                 wrongAudio.Stop();
                 wrongAudio.Play();
 
@@ -43,9 +40,6 @@ public class serveplate : MonoBehaviour
 
             if (gameflow.plateValue[gameflow.plateNum] == 101000)
             {
-                Destroywrong = GameObject.Find("Sushi_Salmon Variant(Clone)");
-               Destroy(Destroywrong, 1f);
-
                 wrongAudio.Stop();
                 wrongAudio.Play();
 
@@ -54,9 +48,6 @@ public class serveplate : MonoBehaviour
 
             if (gameflow.plateValue[gameflow.plateNum] == 100100)
             {
-                Destroywrong = GameObject.Find("Sushi_Tuna Variant(Clone)");
-                Destroy(Destroywrong, 1f);
-
                 wrongAudio.Stop();
                 wrongAudio.Play();
 
@@ -65,9 +56,6 @@ public class serveplate : MonoBehaviour
 
             if (gameflow.plateValue[gameflow.plateNum] == 100010)
             {
-                Destroywrong = GameObject.Find("Sushi_Gizzard_Shad Variant(Clone)");
-                Destroy(Destroywrong, 1f);
-
                 wrongAudio.Stop();
                 wrongAudio.Play();
 
@@ -76,9 +64,6 @@ public class serveplate : MonoBehaviour
 
             if (gameflow.plateValue[gameflow.plateNum] == 100001)
             {
-                Destroywrong = GameObject.Find("Sushi_Squid Variant(Clone)");
-                Destroy(Destroywrong, 1f);
-
                 wrongAudio.Stop();
                 wrongAudio.Play();
 
