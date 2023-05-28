@@ -16,20 +16,20 @@ public class Collision_destroy_with_rice : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter(Collision col)
     {
         DestroyRice = GameObject.Find("Sashimi_rice(Clone)");
 
-        if (col.gameObject.name=="Tuna_sashimi(Clone)")
+        if (col.gameObject.name == "Tuna_sashimi(Clone)")
         {
             Destroy(col.gameObject);
             Destroy(DestroyRice);
