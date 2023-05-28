@@ -7,7 +7,7 @@ public class gameflow : MonoBehaviour
 {
     public static int [] orderValue= { 0,0,0};
     public static int [] plateValue = { 0,0,0};
-    public static float [] orderTimer ={60,60,60};
+    public static float[] orderTimer = { 60, 60, 60 };
     private int [] randomOrder= { 0, 0, 0 };
 
     public static int plateNum = 0;
