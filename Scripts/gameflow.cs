@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class gameflow : MonoBehaviour
@@ -14,9 +15,9 @@ public class gameflow : MonoBehaviour
 
     public Transform plateSelector;
 
-    public MeshRenderer[] currentPic;
+    public Image[] currentPic;
 
-    public Texture[] orderPics;
+    public Sprite[] orderPics;
 
     public static float emptyPlateNow = -1;
 
@@ -72,19 +73,19 @@ public class gameflow : MonoBehaviour
         for(int rep=0; rep<3; rep+=1)
         {
             if (orderValue[rep] == 110000)
-                currentPic[rep].GetComponent<MeshRenderer>().material.mainTexture = orderPics[0];
+                currentPic[rep].GetComponent<Image>().sprite = orderPics[0];
 
             if (orderValue[rep] == 101000)
-                currentPic[rep].GetComponent<MeshRenderer>().material.mainTexture = orderPics[1];
+                currentPic[rep].GetComponent<Image>().sprite = orderPics[1];
 
             if (orderValue[rep] == 100100)
-                currentPic[rep].GetComponent<MeshRenderer>().material.mainTexture = orderPics[2];
+                currentPic[rep].GetComponent<Image>().sprite = orderPics[2];
 
             if (orderValue[rep] == 100010)
-                currentPic[rep].GetComponent<MeshRenderer>().material.mainTexture = orderPics[3];
+                currentPic[rep].GetComponent<Image>().sprite = orderPics[3];
 
             if (orderValue[rep] == 100001)
-                currentPic[rep].GetComponent<MeshRenderer>().material.mainTexture = orderPics[4];
+                currentPic[rep].GetComponent<Image>().sprite = orderPics[4];
         }
     }
 
