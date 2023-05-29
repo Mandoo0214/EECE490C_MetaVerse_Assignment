@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414736, b: 0.12107852, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21704,6 +21704,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   grabRange: 1.5
+  Squid: {fileID: 1898105546038498273, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
+  Kohada: {fileID: 3300783062014867410, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
+  Ebi: {fileID: 2826252549101449445, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
+  Tuna: {fileID: 8909130684441029255, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
+  Salmon: {fileID: 8218828651626065135, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
+  Rice: {fileID: 3822272386673814624, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
 --- !u!114 &1240618000
 MonoBehaviour:
   m_ObjectHideFlags: 0
