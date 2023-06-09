@@ -249,6 +249,6 @@ public class gameflow : MonoBehaviour
         }
 
         //set the position of plateSelector
-        plateSelector.transform.position = new Vector3((float)-2.610, (float)1.657, plateZpos);
+        plateSelector.transform.position = new Vector3((float)-2.610, (float)1.787, plateZpos);
     }
 }
