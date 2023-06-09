@@ -9,6 +9,7 @@ public class gameflow : MonoBehaviour
     public static int [] plateValue = { 0,0,0};
     public static float[] orderTimer = { 15, 15, 15 };
     private int [] randomOrder= { 0, 0, 0 };
+    public static int missnum = 0;
 
     public static int plateNum = 0;
     public static float plateZpos = (float)0.229;
@@ -121,6 +122,13 @@ public class gameflow : MonoBehaviour
 
         if(orderTimer[0]<=0)
         {
+            if(orderValue[0]!=plateValue[0])
+            {
+               missnum += 1;
+            }
+
+            plateValue[0] = 0;//reset plate
+
             orderTimer[0] = 15; //reset Timer
 
             randomOrder[0] = Random.Range(1, 6);
@@ -157,6 +165,12 @@ public class gameflow : MonoBehaviour
 
         if(orderTimer[1]<=0)
         {
+            if (orderValue[1] != plateValue[1])
+            {
+                missnum += 1;
+            }
+
+            plateValue[1] = 0;//reset plate
             orderTimer[1] = 15; //reset Timer
 
             randomOrder[1] = Random.Range(1, 6);
@@ -193,6 +207,13 @@ public class gameflow : MonoBehaviour
 
         if(orderTimer[2]<=0)
         {
+            if (orderValue[2] != plateValue[2])
+            {
+                missnum += 1;
+            }
+
+            plateValue[2] = 0;//reset plate
+
             orderTimer[2] = 15; //reset Timer
 
             randomOrder[2] = Random.Range(1, 6);

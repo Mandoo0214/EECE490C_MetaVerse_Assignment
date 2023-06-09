@@ -28,7 +28,7 @@ public class serveplate : MonoBehaviour
             correctAudio.Play();
 
             //reset values
-            gameflow.plateValue[gameflow.plateNum] = 0;
+            //gameflow.plateValue[gameflow.plateNum] = 0;
             gameflow.orderTimer[gameflow.plateNum] = 0;
         }
         else
