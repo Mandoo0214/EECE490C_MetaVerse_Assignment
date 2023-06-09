@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EmotionSpawner : MonoBehaviour
+public class EmotionSpawner2 : MonoBehaviour
 {
     public GameObject A;
     public GameObject C;
     public GameObject S;
 
-    bool isMove = NPC_animator.IsMove;
+    bool isMove2 = NPC_animator2.IsMove2;
 
     float Timeleft = gameflow.orderTimer[0];
 
@@ -27,7 +27,7 @@ public class EmotionSpawner : MonoBehaviour
 
     IEnumerator Spawner(bool isRunning)
     {
-        yield return new WaitUntil(() => isMove == false);
+        yield return new WaitUntil(() => isMove2 == false);
 
         while (isRunning)
         {
