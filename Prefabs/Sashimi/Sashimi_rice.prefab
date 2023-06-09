@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6885284822560472570}
   - component: {fileID: 5978649924237556606}
   - component: {fileID: 2680792514852905308}
+  - component: {fileID: 4709865551092565993}
   m_Layer: 0
   m_Name: Sashimi_rice
   m_TagString: Untagged
@@ -133,3 +134,20 @@ MonoBehaviour:
   Ebi: {fileID: 6956919641173723861, guid: 184147a7962a7684187bb008196019fa, type: 3}
   Tuna: {fileID: 1856036829542655347, guid: 691bd456691b27a49bb7f6a583f41d6e, type: 3}
   Salmon: {fileID: 8063086824491794126, guid: 3f0cea719bc11af4489291c593447e30, type: 3}
+--- !u!114 &4709865551092565993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822272386673814624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []

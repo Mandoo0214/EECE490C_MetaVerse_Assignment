@@ -5,10 +5,12 @@ using UnityEngine;
 public class Grab : MonoBehaviour
 {
     // Start is called before the first frame update
-    bool isGrabbing = false;
-    GameObject grabbedObject;
+    bool isGrabbingR = false;
+    bool isGrabbingL = false;
+    GameObject grabbedObjectR;
+    GameObject grabbedObjectL;
     public LayerMask grabbedLayer;
-    public float grabRange = 0.2f;
+    public float grabRange = 0.4f;
     public GameObject Squid;
     public GameObject Kohada;
     public GameObject Ebi;
@@ -18,27 +20,46 @@ public class Grab : MonoBehaviour
 
     private void Update()
     {
-        if(isGrabbing == false)
+        if(isGrabbingR == false)
         {
-            TryGrab();
+            TryGrabR();
         }
         else
         {
-            TryUngrab();
+            TryUngrabR();
+        }
+        if (isGrabbingL == false)
+        {
+            TryGrabL();
+        }
+        else
+        {
+            TryUngrabL();
         }
     }
-    private void TryUngrab()
+    private void TryUngrabR()
     {
         if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.RTouch))
         {
-            isGrabbing = false;
-            grabbedObject.GetComponent<Rigidbody>().isKinematic = false;
-            grabbedObject.transform.parent = null;
-            grabbedObject = null;
+            isGrabbingR = false;
+            //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = false;
+            grabbedObjectR.transform.parent = null;
+            grabbedObjectR = null;
         }
     }
 
-    private void TryGrab()
+    private void TryUngrabL()
+    {
+        if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.LTouch))
+        {
+            isGrabbingL = false;
+            //grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
+            grabbedObjectL.transform.parent = null;
+            grabbedObjectL = null;
+        }
+    }
+
+    private void TryGrabR()
     {
         if (ARAVRInput.GetDown(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.RTouch))
         {
@@ -56,46 +77,109 @@ public class Grab : MonoBehaviour
                 }
                 if (hitObjects.Length > 0)
                 {
-                    isGrabbing = true;
+                    isGrabbingR = true;
                     if(hitObjects[closest].gameObject.name== "Ebi_sashimi(Clone)")
                     {
                         Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Ebi, spotPos, Ebi.transform.rotation);
-                        grabbedObject = Ebi;
+                        grabbedObjectR = Ebi;
                     }
                     else if (hitObjects[closest].gameObject.name == "Salmon_sashimi(Clone)")
                     {
                         Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Salmon, spotPos, Salmon.transform.rotation);
-                        grabbedObject = Salmon;
+                        grabbedObjectR = Salmon;
                     }
                     else if (hitObjects[closest].gameObject.name == "Tuna_sashimi(Clone)")
                     {
                         Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Tuna, spotPos, Tuna.transform.rotation);
-                        grabbedObject = Tuna;
+                        grabbedObjectR = Tuna;
                     }
                     else if (hitObjects[closest].gameObject.name == "Squid_sashimi(Clone)")
                     {
                         Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Squid, spotPos, Squid.transform.rotation);
-                        grabbedObject = Squid;
+                        grabbedObjectR = Squid;
                     }
                     else if (hitObjects[closest].gameObject.name == "Kohada_sashimi(Clone)")
                     {
                         Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Kohada, spotPos, Kohada.transform.rotation);
-                        grabbedObject = Kohada;
+                        grabbedObjectR = Kohada;
                     }
                     else if (hitObjects[closest].gameObject.name == "Sashimi_rice(Clone)")
                     {
                         Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Rice, spotPos, Rice.transform.rotation);
-                        grabbedObject = Rice;
+                        grabbedObjectR = Rice;
                     }
                     //grabbedObject = hitObjects[closest].gameObject;
-                    grabbedObject.transform.parent = ARAVRInput.RHand;
-                    grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+                    grabbedObjectR.transform.parent = ARAVRInput.RHand;
+                    grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
+                }
+            }
+        }
+    }
+
+    private void TryGrabL()
+    {
+        if (ARAVRInput.GetDown(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.LTouch))
+        {
+            int closest = 0;
+            Collider[] hitObjects = Physics.OverlapSphere(ARAVRInput.RHandPosition, grabRange, grabbedLayer);
+            for (int i = 1; i < hitObjects.Length; i++)
+            {
+                Vector3 closestPos = hitObjects[closest].transform.position;
+                float closestDistance = Vector3.Distance(closestPos, ARAVRInput.LHandPosition);
+                Vector3 nextPos = hitObjects[i].transform.position;
+                float nextDistance = Vector3.Distance(nextPos, ARAVRInput.LHandPosition);
+                if (nextDistance < closestDistance)
+                {
+                    closest = i;
+                }
+                if (hitObjects.Length > 0)
+                {
+                    isGrabbingR = true;
+                    if (hitObjects[closest].gameObject.name == "Ebi_sashimi(Clone)")
+                    {
+                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
+                        Instantiate(Ebi, spotPos, Ebi.transform.rotation);
+                        grabbedObjectL = Ebi;
+                    }
+                    else if (hitObjects[closest].gameObject.name == "Salmon_sashimi(Clone)")
+                    {
+                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
+                        Instantiate(Salmon, spotPos, Salmon.transform.rotation);
+                        grabbedObjectL = Salmon;
+                    }
+                    else if (hitObjects[closest].gameObject.name == "Tuna_sashimi(Clone)")
+                    {
+                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
+                        Instantiate(Tuna, spotPos, Tuna.transform.rotation);
+                        grabbedObjectL = Tuna;
+                    }
+                    else if (hitObjects[closest].gameObject.name == "Squid_sashimi(Clone)")
+                    {
+                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
+                        Instantiate(Squid, spotPos, Squid.transform.rotation);
+                        grabbedObjectL = Squid;
+                    }
+                    else if (hitObjects[closest].gameObject.name == "Kohada_sashimi(Clone)")
+                    {
+                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
+                        Instantiate(Kohada, spotPos, Kohada.transform.rotation);
+                        grabbedObjectL = Kohada;
+                    }
+                    else if (hitObjects[closest].gameObject.name == "Sashimi_rice(Clone)")
+                    {
+                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
+                        Instantiate(Rice, spotPos, Rice.transform.rotation);
+                        grabbedObjectL = Rice;
+                    }
+                    //grabbedObject = hitObjects[closest].gameObject;
+                    grabbedObjectL.transform.parent = ARAVRInput.RHand;
+                    grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
                 }
             }
         }

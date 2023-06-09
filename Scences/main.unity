@@ -503,6 +503,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 112362051}
     m_Modifications:
+    - target: {fileID: -4093739538035048593, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1898105546038498273, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
       propertyPath: m_Name
       value: Squid_sashimi(Clone)
@@ -556,6 +560,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6833192261580994318, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6833192261580994318, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
@@ -566,28 +574,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1898105546038661057, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
   m_PrefabInstance: {fileID: 24127842}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &24127844 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1898105546038498273, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
-  m_PrefabInstance: {fileID: 24127842}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &24127845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24127844}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1 &26159194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,8 +1513,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 112362051}
     m_Modifications:
     - target: {fileID: 2988588033049258600, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2988588033049258600, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7447653787946910537, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8218828651626065135, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
       propertyPath: m_Name
@@ -1589,28 +1583,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8218828651626426575, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
   m_PrefabInstance: {fileID: 110522944}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &110522946 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8218828651626065135, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
-  m_PrefabInstance: {fileID: 110522944}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &110522947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 110522946}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1 &112362050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6135,6 +6107,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -30.608002
       objectReference: {fileID: 0}
+    - target: {fileID: 4709865551092565993, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978649924237556606, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 5978649924237556606, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
       propertyPath: m_IsKinematic
       value: 1
@@ -6146,28 +6126,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3822272386674044992, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
   m_PrefabInstance: {fileID: 386551602}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &386551604 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3822272386673814624, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
-  m_PrefabInstance: {fileID: 386551602}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &386551605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386551604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1001 &389111688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6228,8 +6186,16 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5046627912319744271, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5046627912319744271, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7892727708468909090, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
@@ -6238,28 +6204,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2826252549101481157, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
   m_PrefabInstance: {fileID: 389111688}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &389111690 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2826252549101449445, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
-  m_PrefabInstance: {fileID: 389111688}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &389111691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389111690}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1001 &396999919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15392,6 +15336,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 112362051}
     m_Modifications:
+    - target: {fileID: -948445211053680947, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3300783062014634994, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -15439,6 +15387,10 @@ PrefabInstance:
     - target: {fileID: 3300783062014867410, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
       propertyPath: m_Name
       value: Kohada_sashimi(Clone)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645465796635442655, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
+      propertyPath: m_Constraints
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4645465796635442655, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
       propertyPath: m_IsKinematic
@@ -27711,8 +27663,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 112362051}
     m_Modifications:
     - target: {fileID: 1491990564306218007, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491990564306218007, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
       propertyPath: m_IsKinematic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2201624307115954667, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8909130684441029255, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
       propertyPath: m_Name
@@ -27773,28 +27733,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8909130684441065127, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
   m_PrefabInstance: {fileID: 1620611527}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1620611529 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8909130684441029255, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
-  m_PrefabInstance: {fileID: 1620611527}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1620611530
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1620611529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1001 &1625155207
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30723,33 +30661,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1799634318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3300783062014867410, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
-  m_PrefabInstance: {fileID: 864285184}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1799634323 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3300783062014634994, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
   m_PrefabInstance: {fileID: 864285184}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1799634324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799634318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
 --- !u!1001 &1801928415
 PrefabInstance:
   m_ObjectHideFlags: 0

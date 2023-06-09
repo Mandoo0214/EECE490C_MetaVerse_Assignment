@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8909130684438770759}
   - component: {fileID: 1491990564306218007}
   - component: {fileID: -8517212806325400985}
+  - component: {fileID: 2201624307115954667}
   m_Layer: 0
   m_Name: Tuna_sashimi
   m_TagString: Untagged
@@ -115,3 +116,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: ba0063f62658e98458fa287c6c3eda55, type: 3}
+--- !u!114 &2201624307115954667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909130684441029255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
