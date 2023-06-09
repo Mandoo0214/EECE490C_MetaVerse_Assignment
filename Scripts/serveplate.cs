@@ -22,10 +22,14 @@ public class serveplate : MonoBehaviour
   
         if (gameflow.orderValue[gameflow.plateNum] == gameflow.plateValue[gameflow.plateNum])
         {
-            Debug.Log("correct"+ " "+ gameflow.plateNum+" "+gameflow.orderValue[gameflow.plateNum]);
-            gameflow.plateValue[gameflow.plateNum] =0;
+            Debug.Log("correct" + " " + gameflow.plateNum + " " + gameflow.orderValue[gameflow.plateNum]);
+            //success sound
             correctAudio.Stop();
             correctAudio.Play();
+
+            //reset values
+            gameflow.plateValue[gameflow.plateNum] = 0;
+            gameflow.orderTimer[gameflow.plateNum] = 0;
         }
         else
         {
