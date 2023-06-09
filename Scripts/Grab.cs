@@ -10,7 +10,7 @@ public class Grab : MonoBehaviour
     GameObject grabbedObjectR;
     GameObject grabbedObjectL;
     public LayerMask grabbedLayer;
-    public float grabRange = 0.3f;
+    public float grabRange = 0.2f;
     public GameObject Squid;
     public GameObject Kohada;
     public GameObject Ebi;
@@ -71,14 +71,14 @@ public class Grab : MonoBehaviour
         if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.LTouch))
         {
             isGrabbingL = false;
-            grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
+            //grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObjectL.transform.parent = null;
             grabbedObjectL.GetComponent<Rigidbody>().velocity = throwDirection * throwPower;
             float angle;
             Vector3 axis;
             deltaRotation.ToAngleAxis(out angle, out axis);
             Vector3 angularVelocity = (1.0f / Time.deltaTime) * angle * axis;
-            //grabbedObjectL.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
+            grabbedObjectL.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
             grabbedObjectL = null;
         }
     }
