@@ -21,5 +21,10 @@ public class TimerManager : MonoBehaviour
         time -= Time.deltaTime;
         text_time[0].text = ((int)time / 60 % 60).ToString("D2");
         text_time[1].text = ((int)time % 60).ToString("D2");
+
+        if(time<=0)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameClear");
+        }
     }
 }
