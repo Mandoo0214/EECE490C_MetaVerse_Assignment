@@ -39,6 +39,7 @@ public class Startext : MonoBehaviour
         else
         {
             textObj.GetComponent<Text>().text = "      ";
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
 
     }
