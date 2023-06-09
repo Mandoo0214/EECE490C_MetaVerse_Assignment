@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     Image timerBar;
-    public float maxTime = 5f;
+    public static float maxTime = 10f;
     float timeLeft;
     //public GameObject timesUpText;
 
@@ -22,7 +22,7 @@ public class Timer : MonoBehaviour
     {
         if (timeLeft > 0)
         {
-            timeLeft -= Time.deltaTime;
+            timeLeft = gameflow.orderTimer[0];
             timerBar.fillAmount = timeLeft / maxTime;
         }
         else
