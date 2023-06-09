@@ -102,39 +102,34 @@ public class Grab : MonoBehaviour
                 if (hitObjects.Length > 0)
                 {
                     isGrabbingR = true;
-                    if(hitObjects[closest].gameObject.name== "Ebi_sashimi(Clone)")
+                    Vector3 spotPos = ARAVRInput.RHandPosition;
+                    if (hitObjects[closest].gameObject.name== "Ebi_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Ebi, spotPos, Ebi.transform.rotation);
                         grabbedObjectR = Ebi;
                     }
                     else if (hitObjects[closest].gameObject.name == "Salmon_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Salmon, spotPos, Salmon.transform.rotation);
                         grabbedObjectR = Salmon;
                     }
                     else if (hitObjects[closest].gameObject.name == "Tuna_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Tuna, spotPos, Tuna.transform.rotation);
                         grabbedObjectR = Tuna;
                     }
                     else if (hitObjects[closest].gameObject.name == "Squid_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Squid, spotPos, Squid.transform.rotation);
                         grabbedObjectR = Squid;
                     }
                     else if (hitObjects[closest].gameObject.name == "Kohada_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Kohada, spotPos, Kohada.transform.rotation);
                         grabbedObjectR = Kohada;
                     }
                     else if (hitObjects[closest].gameObject.name == "Sashimi_rice(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Rice, spotPos, Rice.transform.rotation);
                         grabbedObjectR = Rice;
                     }
@@ -167,39 +162,35 @@ public class Grab : MonoBehaviour
                 if (hitObjects.Length > 0)
                 {
                     isGrabbingR = true;
+                    Vector3 spotPos = ARAVRInput.LHandPosition;
                     if (hitObjects[closest].gameObject.name == "Ebi_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Ebi, spotPos, Ebi.transform.rotation);
                         grabbedObjectL = Ebi;
                     }
                     else if (hitObjects[closest].gameObject.name == "Salmon_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Salmon, spotPos, Salmon.transform.rotation);
                         grabbedObjectL = Salmon;
                     }
                     else if (hitObjects[closest].gameObject.name == "Tuna_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Tuna, spotPos, Tuna.transform.rotation);
                         grabbedObjectL = Tuna;
                     }
                     else if (hitObjects[closest].gameObject.name == "Squid_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Squid, spotPos, Squid.transform.rotation);
                         grabbedObjectL = Squid;
                     }
                     else if (hitObjects[closest].gameObject.name == "Kohada_sashimi(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Kohada, spotPos, Kohada.transform.rotation);
                         grabbedObjectL = Kohada;
                     }
                     else if (hitObjects[closest].gameObject.name == "Sashimi_rice(Clone)")
                     {
-                        Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
+                        //Vector3 spotPos = hitObjects[closest].gameObject.transform.position;
                         Instantiate(Rice, spotPos, Rice.transform.rotation);
                         grabbedObjectL = Rice;
                     }

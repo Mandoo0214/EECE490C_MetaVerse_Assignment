@@ -561,7 +561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6833192261580994318, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
       propertyPath: m_Constraints
-      value: 14
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6833192261580994318, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
       propertyPath: m_IsKinematic
@@ -1514,7 +1514,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2988588033049258600, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
       propertyPath: m_Constraints
-      value: 14
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 2988588033049258600, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
       propertyPath: m_IsKinematic
@@ -5944,15 +5944,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3822272386674044992, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2803
+      value: -0.319
       objectReference: {fileID: 0}
     - target: {fileID: 3822272386674044992, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7085
+      value: -0.65
       objectReference: {fileID: 0}
     - target: {fileID: 3822272386674044992, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.5678
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3822272386674044992, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5988,7 +5988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5978649924237556606, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
       propertyPath: m_Constraints
-      value: 14
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5978649924237556606, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
       propertyPath: m_IsKinematic
@@ -6062,7 +6062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5046627912319744271, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
       propertyPath: m_Constraints
-      value: 14
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 5046627912319744271, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
       propertyPath: m_IsKinematic
@@ -15291,7 +15291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4645465796635442655, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
       propertyPath: m_Constraints
-      value: 14
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 4645465796635442655, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
       propertyPath: m_IsKinematic
@@ -21494,6 +21494,7 @@ MonoBehaviour:
   Tuna: {fileID: 8909130684441029255, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
   Salmon: {fileID: 8218828651626065135, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
   Rice: {fileID: 3822272386673814624, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
+  throwPower: 10
 --- !u!114 &1240618000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27504,7 +27505,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1491990564306218007, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
       propertyPath: m_Constraints
-      value: 14
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 1491990564306218007, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
       propertyPath: m_IsKinematic
