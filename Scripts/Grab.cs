@@ -50,7 +50,7 @@ public class Grab : MonoBehaviour
         if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.RTouch))
         {
             isGrabbingR = false;
-            grabbedObjectR.GetComponent<Rigidbody>().isKinematic = false;
+            //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObjectR.transform.parent = null;
             grabbedObjectR.GetComponent<Rigidbody>().velocity = throwDirection * throwPower;
             float angle;
@@ -78,7 +78,7 @@ public class Grab : MonoBehaviour
             Vector3 axis;
             deltaRotation.ToAngleAxis(out angle, out axis);
             Vector3 angularVelocity = (1.0f / Time.deltaTime) * angle * axis;
-            grabbedObjectL.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
+            //grabbedObjectL.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
             grabbedObjectL = null;
         }
     }
@@ -135,7 +135,7 @@ public class Grab : MonoBehaviour
                     }
                     //grabbedObject = hitObjects[closest].gameObject;
                     grabbedObjectR.transform.parent = ARAVRInput.RHand;
-                    grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
+                    //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
                     prevPosR = ARAVRInput.RHandPosition;
                     prevRotR = ARAVRInput.RHand.rotation;
                 }
@@ -196,7 +196,7 @@ public class Grab : MonoBehaviour
                     }
                     //grabbedObject = hitObjects[closest].gameObject;
                     grabbedObjectL.transform.parent = ARAVRInput.LHand;
-                    grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
+                    //grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
                     prevPosL = ARAVRInput.LHandPosition;
                     prevRotL = ARAVRInput.LHand.rotation;
                 }
