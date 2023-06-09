@@ -27510,7 +27510,7 @@ PrefabInstance:
     - target: {fileID: 2234260947949259124, guid: eb0d05c4df7b14f4fb86703d0362e152, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 7921670326349844488d995a2e55bb13, type: 2}
+      objectReference: {fileID: 9100000, guid: f632cfa5645131e478c8ab62eb0f188a, type: 2}
     - target: {fileID: 2867359978909516582, guid: eb0d05c4df7b14f4fb86703d0362e152, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -27574,6 +27574,10 @@ PrefabInstance:
     - target: {fileID: 2867359978909687620, guid: eb0d05c4df7b14f4fb86703d0362e152, type: 3}
       propertyPath: m_Name
       value: Mobile_CommonPeople_Male1A
+      objectReference: {fileID: 0}
+    - target: {fileID: 2867359978909687620, guid: eb0d05c4df7b14f4fb86703d0362e152, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eb0d05c4df7b14f4fb86703d0362e152, type: 3}
@@ -28473,14 +28477,14 @@ PrefabInstance:
     - target: {fileID: 5745055913166035760, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 7921670326349844488d995a2e55bb13, type: 2}
+      objectReference: {fileID: 9100000, guid: bde70ee395fb1a841bbb3be8d79c7a50, type: 2}
     - target: {fileID: 9160232260381715301, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.075
       objectReference: {fileID: 0}
     - target: {fileID: 9160232260381715303, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9160232260381715303, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
       propertyPath: m_LocalScale.x
@@ -28541,6 +28545,10 @@ PrefabInstance:
     - target: {fileID: 9160232260382209797, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
       propertyPath: m_Name
       value: Mobile_CommonPeople_Female4B
+      objectReference: {fileID: 0}
+    - target: {fileID: 9160232260382209797, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
@@ -29566,7 +29574,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2867359978909687620, guid: eb0d05c4df7b14f4fb86703d0362e152, type: 3}
   m_PrefabInstance: {fileID: 1605256765}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1721284871
+--- !u!114 &1721284874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29575,10 +29583,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721284869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a130961b4cc00344db09bc432e7655d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ccce95f601926b4181bb76680bddd1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1721284872
+--- !u!114 &1721284875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29587,18 +29595,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1721284869}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecaab7f817cb5934183207da1d332867, type: 3}
+  m_Script: {fileID: 11500000, guid: fae60f0787c0d2a42ac8b1a84620d05b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   chairPos: {x: -0.96, y: 0.7, z: -1.16}
   sitPos: {x: -0.96, y: 1, z: -1.16}
-  player: {fileID: 0}
 --- !u!1 &1730541316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9160232260382209797, guid: 03f1e762c756dce4db917bff849c329f, type: 3}
   m_PrefabInstance: {fileID: 1656826213}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1730541318
+--- !u!114 &1730541321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29610,7 +29617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a130961b4cc00344db09bc432e7655d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1730541319
+--- !u!114 &1730541322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29624,7 +29631,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chairPos: {x: -1, y: 0.7, z: 1.27}
   sitPos: {x: -1, y: 1, z: 1.27}
-  player: {fileID: 0}
 --- !u!1001 &1731502090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30664,8 +30670,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 870052203}
   - {fileID: 1656826214}
+  - {fileID: 870052203}
   - {fileID: 1605256766}
   - {fileID: 506588106}
   m_Father: {fileID: 0}
@@ -36681,7 +36687,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 53d6cba540c827b4a92423f1a8fd60bc, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400056, guid: 53d6cba540c827b4a92423f1a8fd60bc, type: 3}
       propertyPath: m_LocalScale.x
@@ -36854,7 +36860,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2136912181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a130961b4cc00344db09bc432e7655d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 47ba1ff92e8d1b14bbf3abf2f6afcf67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3629172223264703006
@@ -36866,12 +36872,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2136912181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecaab7f817cb5934183207da1d332867, type: 3}
+  m_Script: {fileID: 11500000, guid: bc54c7289dcbc544aa4b8e1901577038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chairPos: {x: -0.52, y: 0.7, z: 0.25}
+  chairPos: {x: -0.9, y: 0.7, z: 0.1}
   sitPos: {x: -0.9, y: 1, z: 0.1}
-  player: {fileID: 0}
 --- !u!54 &3982698212637992070
 Rigidbody:
   m_ObjectHideFlags: 0

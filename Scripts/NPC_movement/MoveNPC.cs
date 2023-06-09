@@ -7,7 +7,6 @@ public class MoveNPC : MonoBehaviour
     //public Vector3 initailPos;
     public Vector3 chairPos;
     public Vector3 sitPos;
-    public GameObject player;
     bool arrived = false;
     // Start is called before the first frame update
     void Start()
