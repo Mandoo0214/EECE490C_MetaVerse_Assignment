@@ -53,7 +53,7 @@ public class Grab : MonoBehaviour
         if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.LTouch))
         {
             isGrabbingL = false;
-            grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
+            //grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObjectL.transform.parent = null;
             grabbedObjectL = null;
         }
@@ -116,7 +116,7 @@ public class Grab : MonoBehaviour
                     }
                     //grabbedObject = hitObjects[closest].gameObject;
                     grabbedObjectR.transform.parent = ARAVRInput.RHand;
-                    grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
+                    //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
                 }
             }
         }
@@ -179,7 +179,7 @@ public class Grab : MonoBehaviour
                     }
                     //grabbedObject = hitObjects[closest].gameObject;
                     grabbedObjectL.transform.parent = ARAVRInput.LHand;
-                    grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
+                    //grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
                 }
             }
         }
