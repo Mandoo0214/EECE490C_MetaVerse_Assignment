@@ -32,41 +32,52 @@ public class Collision_destroy_with_rice : MonoBehaviour
         if (col.gameObject.name == "Tuna_sashimi(Clone)")
         {
             Destroy(col.gameObject);
+            Destroy(this);
             Destroy(DestroyRice);
 
-            Instantiate(Tuna, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Tuna.transform.rotation);
+            GameObject TunaSushi = Instantiate(Tuna, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Tuna.transform.rotation);
+
+            Destroy(TunaSushi,3);
         }
 
         if (col.gameObject.name == "Ebi_sashimi(Clone)")
         {
             Destroy(col.gameObject);
+            Destroy(this);
             Destroy(DestroyRice);
 
-            Instantiate(Ebi, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Ebi.transform.rotation);
+            GameObject EbiSushi = Instantiate(Ebi, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Ebi.transform.rotation);
+            Destroy(EbiSushi, 3);
         }
 
         if (col.gameObject.name == "Squid_sashimi(Clone)")
         {
             Destroy(col.gameObject);
+            Destroy(this);
             Destroy(DestroyRice);
 
-            Instantiate(Squid, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Squid.transform.rotation);
+            GameObject SquidSushi =Instantiate(Squid, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Squid.transform.rotation);
+            Destroy(SquidSushi, 3);
         }
 
         if (col.gameObject.name == "Kohada_sashimi(Clone)")
         {
             Destroy(col.gameObject);
+            Destroy(this);
             Destroy(DestroyRice);
 
-            Instantiate(Kohada, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Kohada.transform.rotation);
+            GameObject KohadaSushi = Instantiate(Kohada, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Kohada.transform.rotation);
+            Destroy(KohadaSushi, 3);
         }
 
         if (col.gameObject.name == "Salmon_sashimi(Clone)")
         {
             Destroy(col.gameObject);
+            Destroy(this);
             Destroy(DestroyRice);
 
-            Instantiate(Salmon, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Salmon.transform.rotation);
+            GameObject SalmonSushi = Instantiate(Salmon, new Vector3((float)-2.651, (float)1.791, gameflow.plateZpos), Salmon.transform.rotation);
+            Destroy(SalmonSushi, 3);
         }
     }
 }
