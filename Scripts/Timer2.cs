@@ -22,7 +22,7 @@ public class Timer2 : MonoBehaviour
     {
         if (timeLeft2 > 0)
         {
-            timeLeft2 = gameflow.orderTimer[0];
+            timeLeft2 = gameflow.orderTimer[2];
             timerBar2.fillAmount = timeLeft2 / maxTime2;
         }
         else
