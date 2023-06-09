@@ -93,7 +93,7 @@ public class gameflow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("tab"))
+        if(Input.GetKeyDown("tab")|| ARAVRInput.GetDown(ARAVRInput.Button.One))
         {
             plateNum += 1;
             plateZpos -= (float)0.5;

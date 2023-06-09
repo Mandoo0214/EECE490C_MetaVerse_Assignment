@@ -10,14 +10,18 @@ public class Grab : MonoBehaviour
     GameObject grabbedObjectR;
     GameObject grabbedObjectL;
     public LayerMask grabbedLayer;
-    public float grabRange = 0.4f;
+    public float grabRange = 0.3f;
     public GameObject Squid;
     public GameObject Kohada;
     public GameObject Ebi;
     public GameObject Tuna;
     public GameObject Salmon;
     public GameObject Rice;
-
+    public float throwPower = 10;
+    Vector3 prevPosR;
+    Quaternion prevRotR;
+    Vector3 prevPosL;
+    Quaternion prevRotL;
     private void Update()
     {
         if(isGrabbingR == false)
@@ -39,22 +43,42 @@ public class Grab : MonoBehaviour
     }
     private void TryUngrabR()
     {
+        Vector3 throwDirection = (ARAVRInput.RHandPosition - prevPosR);
+        prevPosR = ARAVRInput.RHandPosition;
+        Quaternion deltaRotation = ARAVRInput.RHand.rotation * Quaternion.Inverse(prevRotR);
+        prevRotR = ARAVRInput.RHand.rotation;
         if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.RTouch))
         {
             isGrabbingR = false;
             grabbedObjectR.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObjectR.transform.parent = null;
+            grabbedObjectR.GetComponent<Rigidbody>().velocity = throwDirection * throwPower;
+            float angle;
+            Vector3 axis;
+            deltaRotation.ToAngleAxis(out angle, out axis);
+            Vector3 angularVelocity = (1.0f / Time.deltaTime) * angle * axis;
+            grabbedObjectR.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
             grabbedObjectR = null;
         }
     }
 
     private void TryUngrabL()
     {
+        Vector3 throwDirection = (ARAVRInput.LHandPosition - prevPosL);
+        prevPosL = ARAVRInput.LHandPosition;
+        Quaternion deltaRotation = ARAVRInput.LHand.rotation * Quaternion.Inverse(prevRotL);
+        prevRotL = ARAVRInput.LHand.rotation;
         if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.LTouch))
         {
             isGrabbingL = false;
-            //grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
+            grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
             grabbedObjectL.transform.parent = null;
+            grabbedObjectL.GetComponent<Rigidbody>().velocity = throwDirection * throwPower;
+            float angle;
+            Vector3 axis;
+            deltaRotation.ToAngleAxis(out angle, out axis);
+            Vector3 angularVelocity = (1.0f / Time.deltaTime) * angle * axis;
+            grabbedObjectL.GetComponent<Rigidbody>().angularVelocity = angularVelocity;
             grabbedObjectL = null;
         }
     }
@@ -116,7 +140,9 @@ public class Grab : MonoBehaviour
                     }
                     //grabbedObject = hitObjects[closest].gameObject;
                     grabbedObjectR.transform.parent = ARAVRInput.RHand;
-                    //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
+                    grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
+                    prevPosR = ARAVRInput.RHandPosition;
+                    prevRotR = ARAVRInput.RHand.rotation;
                 }
             }
         }
@@ -179,7 +205,9 @@ public class Grab : MonoBehaviour
                     }
                     //grabbedObject = hitObjects[closest].gameObject;
                     grabbedObjectL.transform.parent = ARAVRInput.LHand;
-                    //grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
+                    grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
+                    prevPosL = ARAVRInput.LHandPosition;
+                    prevRotL = ARAVRInput.LHand.rotation;
                 }
             }
         }
