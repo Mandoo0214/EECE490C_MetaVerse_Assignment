@@ -7,7 +7,7 @@ public class gameflow : MonoBehaviour
 {
     public static int [] orderValue= { 0,0,0};
     public static int [] plateValue = { 0,0,0};
-    public static float[] orderTimer = { 10, 10, 10 };
+    public static float[] orderTimer = { 15, 15, 15 };
     private int [] randomOrder= { 0, 0, 0 };
 
     public static int plateNum = 0;
@@ -110,7 +110,7 @@ public class gameflow : MonoBehaviour
 
         if(orderTimer[0]<=0)
         {
-            orderTimer[0] = 10; //reset Timer
+            orderTimer[0] = 15; //reset Timer
 
             randomOrder[0] = Random.Range(1, 6);
 
@@ -143,9 +143,10 @@ public class gameflow : MonoBehaviour
             if (orderValue[0] == 100001)
                 currentPic[0].GetComponent<Image>().sprite = orderPics[4];
         }
-        else if(orderTimer[1]<=0)
+
+        if(orderTimer[1]<=0)
         {
-            orderTimer[1] = 10; //reset Timer
+            orderTimer[1] = 15; //reset Timer
 
             randomOrder[1] = Random.Range(1, 6);
 
@@ -178,9 +179,10 @@ public class gameflow : MonoBehaviour
             if (orderValue[1] == 100001)
                 currentPic[1].GetComponent<Image>().sprite = orderPics[4];
         }
-        else if(orderTimer[2]<=0)
+
+        if(orderTimer[2]<=0)
         {
-            orderTimer[2] = 10; //reset Timer
+            orderTimer[2] = 15; //reset Timer
 
             randomOrder[2] = Random.Range(1, 6);
 

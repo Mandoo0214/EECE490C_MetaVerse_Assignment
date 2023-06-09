@@ -37616,18 +37616,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7237563674876502038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7237563674876502040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92129c069ca28b545b94eb0cb3b4aba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &7237563674876502039
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37659,7 +37647,7 @@ GameObject:
   - component: {fileID: 7237563674876502039}
   - component: {fileID: 7237563674876502036}
   - component: {fileID: 7237563674876502037}
-  - component: {fileID: 7237563674876502038}
+  - component: {fileID: 7237563674876502041}
   m_Layer: 5
   m_Name: time gage
   m_TagString: Untagged
@@ -37667,6 +37655,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7237563674876502041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237563674876502040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5391cfe6050786e40be06d7b1dae59f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7237563674992712158
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37763,18 +37763,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -102}
   m_SizeDelta: {x: 240, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7237563675019865747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7237563675019865757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92129c069ca28b545b94eb0cb3b4aba5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7237563675019865757
 GameObject:
   m_ObjectHideFlags: 0
@@ -37786,7 +37774,7 @@ GameObject:
   - component: {fileID: 7237563675019865746}
   - component: {fileID: 7237563675019865745}
   - component: {fileID: 7237563675019865744}
-  - component: {fileID: 7237563675019865747}
+  - component: {fileID: 7237563675019865758}
   m_Layer: 5
   m_Name: time gage
   m_TagString: Untagged
@@ -37794,6 +37782,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7237563675019865758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7237563675019865757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d344064b8ccbd44b9352d755fa7a9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8721412671107853219
 MonoBehaviour:
   m_ObjectHideFlags: 0
