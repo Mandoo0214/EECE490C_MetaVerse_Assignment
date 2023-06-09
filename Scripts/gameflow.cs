@@ -104,9 +104,13 @@ public class gameflow : MonoBehaviour
             }
         }
 
-        orderTimer[0] -= Time.deltaTime;
-        orderTimer[1] -= Time.deltaTime;
-        orderTimer[2] -= Time.deltaTime;
+        if(!NPC_animator.IsMove)
+        {
+            orderTimer[0] -= Time.deltaTime;
+            orderTimer[1] -= Time.deltaTime;
+            orderTimer[2] -= Time.deltaTime;
+        }
+        
 
         if(orderTimer[0]<=0)
         {
