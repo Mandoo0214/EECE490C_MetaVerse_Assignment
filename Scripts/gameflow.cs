@@ -107,10 +107,17 @@ public class gameflow : MonoBehaviour
         if(!NPC_animator.IsMove)
         {
             orderTimer[0] -= Time.deltaTime;
+        }
+
+        if(!NPC_animator1.IsMove1)
+        {
             orderTimer[1] -= Time.deltaTime;
-            orderTimer[2] -= Time.deltaTime;
         }
         
+        if(!NPC_animator2.IsMove2)
+        {
+            orderTimer[2] -= Time.deltaTime;
+        }
 
         if(orderTimer[0]<=0)
         {
