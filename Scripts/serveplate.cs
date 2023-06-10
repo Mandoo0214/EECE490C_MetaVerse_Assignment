@@ -30,15 +30,10 @@ public class serveplate : MonoBehaviour
             //when specialorder
             if(gameflow.specialOrder[gameflow.plateNum]==0)
             {
-                if(gameflow.missnum==0)
-                {
-                    gameflow.missnum = 0;
-                }
-                else
+                if(gameflow.missnum!=0)
                 {
                     gameflow.missnum -= 1;
-                }
-                
+                }    
             }
 
             //reset values

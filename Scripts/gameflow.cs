@@ -134,7 +134,7 @@ public class gameflow : MonoBehaviour
 
             orderTimer[0] = MaxTimer; //reset Timer
 
-            specialOrder[0] = Random.Range(0,9);
+            specialOrder[0] = Random.Range(0,20);
             randomOrder[0] = Random.Range(1, 6);
 
             if (randomOrder[0] == 1)
@@ -199,7 +199,7 @@ public class gameflow : MonoBehaviour
             orderTimer[1] = MaxTimer; //reset Timer
 
             randomOrder[1] = Random.Range(1, 6);
-            specialOrder[1] = Random.Range(0, 9);
+            specialOrder[1] = Random.Range(0, 20);
 
             if (randomOrder[1] == 1)
                 orderValue[1] = 110000;
@@ -264,7 +264,7 @@ public class gameflow : MonoBehaviour
             orderTimer[2] = MaxTimer; //reset Timer
 
             randomOrder[2] = Random.Range(1, 6);
-            specialOrder[2] = Random.Range(0, 9);
+            specialOrder[2] = Random.Range(0, 20);
 
             if (randomOrder[2] == 1)
                 orderValue[2] = 110000;
