@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grab : MonoBehaviour
+public class GrabL : MonoBehaviour
 {
     // Start is called before the first frame update
-    bool isGrabbingR = false;
-    GameObject grabbedObjectR;
+    bool isGrabbingL = false;
+    GameObject grabbedObjectL;
     public LayerMask grabbedLayer;
     public float grabRange = 0.005f;
     public GameObject Squid;
@@ -17,38 +17,38 @@ public class Grab : MonoBehaviour
     public GameObject Rice;
     private void Update()
     {
-        if (isGrabbingR == false)
+        if (isGrabbingL == false)
         {
-            TryGrabR();
+            TryGrabL();
         }
         else
         {
-            TryUngrabR();
+            TryUngrabL();
         }
     }
-    private void TryUngrabR()
+    private void TryUngrabL()
     {
-        if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.RTouch))
+        if (ARAVRInput.GetUp(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.LTouch))
         {
-            isGrabbingR = false;
-            grabbedObjectR.GetComponent<Rigidbody>().isKinematic = false;
-            grabbedObjectR.transform.parent = null;
-            grabbedObjectR = null;
+            isGrabbingL = false;
+            grabbedObjectL.GetComponent<Rigidbody>().isKinematic = false;
+            grabbedObjectL.transform.parent = null;
+            grabbedObjectL = null;
         }
     }
 
-    private void TryGrabR()
+    private void TryGrabL()
     {
         if (ARAVRInput.GetDown(ARAVRInput.Button.HandTrigger, ARAVRInput.Controller.RTouch))
         {
             int closest = 0;
-            Collider[] hitObjects = Physics.OverlapSphere(ARAVRInput.RHandPosition, grabRange, grabbedLayer);
+            Collider[] hitObjects = Physics.OverlapSphere(ARAVRInput.LHandPosition, grabRange, grabbedLayer);
             for (int i = 1; i < hitObjects.Length; i++)
             {
                 Vector3 closestPos = hitObjects[closest].transform.position;
-                float closestDistance = Vector3.Distance(closestPos, ARAVRInput.RHandPosition);
+                float closestDistance = Vector3.Distance(closestPos, ARAVRInput.LHandPosition);
                 Vector3 nextPos = hitObjects[i].transform.position;
-                float nextDistance = Vector3.Distance(nextPos, ARAVRInput.RHandPosition);
+                float nextDistance = Vector3.Distance(nextPos, ARAVRInput.LHandPosition);
                 if (nextDistance < closestDistance)
                 {
                     closest = i;
@@ -57,36 +57,36 @@ public class Grab : MonoBehaviour
             }
             if (hitObjects.Length > 0)
             {
-                isGrabbingR = true;
-                Vector3 spotPos = ARAVRInput.RHandPosition;
+                isGrabbingL = true;
+                Vector3 spotPos = ARAVRInput.LHandPosition;
                 if (hitObjects[closest].gameObject.name == "Ebi_button")
                 {
-                    grabbedObjectR = Instantiate(Ebi, spotPos, Ebi.transform.rotation);
+                    grabbedObjectL = Instantiate(Ebi, spotPos, Ebi.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Salmon_button")
                 {
-                    grabbedObjectR = Instantiate(Salmon, spotPos, Salmon.transform.rotation);
+                    grabbedObjectL = Instantiate(Salmon, spotPos, Salmon.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Tuna_button")
                 {
-                    grabbedObjectR = Instantiate(Tuna, spotPos, Tuna.transform.rotation);
+                    grabbedObjectL = Instantiate(Tuna, spotPos, Tuna.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Squid_button")
                 {
-                    grabbedObjectR = Instantiate(Squid, spotPos, Squid.transform.rotation);
+                    grabbedObjectL = Instantiate(Squid, spotPos, Squid.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Kohada_button")
                 {
-                    grabbedObjectR = Instantiate(Kohada, spotPos, Kohada.transform.rotation);
+                    grabbedObjectL = Instantiate(Kohada, spotPos, Kohada.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Rice_button")
                 {
-                    grabbedObjectR = Instantiate(Rice, spotPos, Rice.transform.rotation);
+                    grabbedObjectL = Instantiate(Rice, spotPos, Rice.transform.rotation);
                 }
 
                 //grabbedObject = hitObjects[closest].gameObject;
-                grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
-                grabbedObjectR.transform.parent = ARAVRInput.RHand;
+                grabbedObjectL.GetComponent<Rigidbody>().isKinematic = true;
+                grabbedObjectL.transform.parent = ARAVRInput.LHand;
             }
         }
     }
