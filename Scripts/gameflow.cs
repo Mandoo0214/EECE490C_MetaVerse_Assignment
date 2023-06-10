@@ -5,9 +5,11 @@ using UnityEngine;
 
 public class gameflow : MonoBehaviour
 {
+    public static float MaxTimer = 15;
+
     public static int [] orderValue= { 0,0,0};
     public static int [] plateValue = { 0,0,0};
-    public static float[] orderTimer = { 15, 15, 15 };
+    public static float[] orderTimer = { MaxTimer, MaxTimer, MaxTimer };
     private int [] randomOrder= { 0, 0, 0 };
     public static int missnum = 0;
 
@@ -129,7 +131,7 @@ public class gameflow : MonoBehaviour
 
             plateValue[0] = 0;//reset plate
 
-            orderTimer[0] = 15; //reset Timer
+            orderTimer[0] = MaxTimer; //reset Timer
 
             randomOrder[0] = Random.Range(1, 6);
 
@@ -171,7 +173,7 @@ public class gameflow : MonoBehaviour
             }
 
             plateValue[1] = 0;//reset plate
-            orderTimer[1] = 15; //reset Timer
+            orderTimer[1] = MaxTimer; //reset Timer
 
             randomOrder[1] = Random.Range(1, 6);
 
@@ -214,7 +216,7 @@ public class gameflow : MonoBehaviour
 
             plateValue[2] = 0;//reset plate
 
-            orderTimer[2] = 15; //reset Timer
+            orderTimer[2] = MaxTimer; //reset Timer
 
             randomOrder[2] = Random.Range(1, 6);
 
