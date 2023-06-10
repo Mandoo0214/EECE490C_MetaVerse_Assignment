@@ -8,6 +8,9 @@ public class RestartScene : MonoBehaviour
     {
         TimerManager.time = 180;
         gameflow.missnum = 0;
+        gameflow.orderTimer[0] = gameflow.MaxTimer;
+        gameflow.orderTimer[1] = gameflow.MaxTimer;
+        gameflow.orderTimer[2] = gameflow.MaxTimer;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
     }
 }
