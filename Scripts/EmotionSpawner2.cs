@@ -36,7 +36,7 @@ public class EmotionSpawner2 : MonoBehaviour
             alreadyhave = false;
             Destroy(Angury);
         }
-        else if (gameflow.orderTimer[2] <= 3f)
+        else if (gameflow.orderTimer[2] <= 7f)
         {
             if (alreadyhave)
             { }
@@ -47,12 +47,12 @@ public class EmotionSpawner2 : MonoBehaviour
             }
 
         }
-        else if (gameflow.orderTimer[2] <= 4f)
+        else if (gameflow.orderTimer[2] <= 8f)
         {
             alreadyhave = false;
             Destroy(Sad);
         }
-        else if (gameflow.orderTimer[2] <= 6f)
+        else if (gameflow.orderTimer[2] <= 14f)
         {
             if (alreadyhave)
             { }
@@ -63,12 +63,12 @@ public class EmotionSpawner2 : MonoBehaviour
             }
 
         }
-        else if (gameflow.orderTimer[2] <= 7f)
+        else if (gameflow.orderTimer[2] <= 15f)
         {
             alreadyhave = false;
             Destroy(Curious);
         }
-        else if (gameflow.orderTimer[2] <= 10f)
+        else if (gameflow.orderTimer[2] <= 20f)
         {
             if (alreadyhave)
             { }

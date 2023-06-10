@@ -6,6 +6,8 @@ public class RestartScene : MonoBehaviour
 {
     public void ChangeSceneToMainWBtn()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("main");
+        TimerManager.time = 180;
+        gameflow.missnum = 0;
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Start");
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer1 : MonoBehaviour
 {
     Image timerBar1;
-    float maxTime1 = 15f;
+    float maxTime1 = gameflow.MaxTimer;
     public static float timeLeft1;
     //public GameObject timesUpText;
 

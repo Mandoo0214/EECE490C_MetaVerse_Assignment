@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class gameflow : MonoBehaviour
 {
-    public static float MaxTimer = 15;
+    public static float MaxTimer = 30;
 
     public static int[] orderValue = { 0, 0, 0 };
     public static int[] plateValue = { 0, 0, 0 };

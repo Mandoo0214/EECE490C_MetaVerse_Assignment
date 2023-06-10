@@ -8,7 +8,7 @@ public class TimerManager : MonoBehaviour
     
     public Text[] text_time; // 시간을 표시할 text
     public Text btn_text; //상태에 따라 버튼의 text를 변경 하기위한 text
-    float time=300; // 시간.
+    public static float time=180; // 시간.
 
 
     private void Start()
