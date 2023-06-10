@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5943506206170736184}
   - component: {fileID: 5943506206170736185}
   m_Layer: 0
-  m_Name: Maguro_button
+  m_Name: Tuna_button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
