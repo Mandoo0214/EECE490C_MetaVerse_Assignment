@@ -83,7 +83,6 @@ public class Grab : MonoBehaviour
                 {
                     grabbedObjectR = Instantiate(Rice, spotPos, Rice.transform.rotation);
                 }
-
                 //grabbedObject = hitObjects[closest].gameObject;
                 grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
                 grabbedObjectR.transform.parent = ARAVRInput.RHand;
