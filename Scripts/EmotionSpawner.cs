@@ -8,38 +8,88 @@ public class EmotionSpawner : MonoBehaviour
     public GameObject C;
     public GameObject S;
 
-    bool isMove = NPC_animator.IsMove;
-
     float Timeleft = gameflow.orderTimer[0];
+
+    float tempTimer;
+
+    bool isMove = NPC_animator.IsMove;
 
     public Transform target;
 
+    private Coroutine startC = null;
+    private Coroutine normalC = null;
+    
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Spawner", true);
+        Debug.Log("Start");
+        tempTimer = 0f;
+        startC = StartCoroutine("SpawnerForStart");
     }
 
     // Update is called once per frame
     void Update()
     {
+        tempTimer += Time.deltaTime;
+
+        if((tempTimer >= 10f) && (Timeleft >= 14.98f) && (!isMove))
+        {
+            Debug.Log("Reset Timer");
+
+            StopCoroutine(startC);
+            Debug.Log("Stop startC");
+
+            if(normalC == null)
+            {
+                Debug.Log("Start new normalC");
+                normalC = StartCoroutine("Spawner");
+            }
+            
+            else
+            {
+                Debug.Log("Start normalC again");
+                StopCoroutine(normalC);
+                normalC = StartCoroutine("Spawner");
+            }
+        }
     }
 
-    IEnumerator Spawner(bool isRunning)
+    IEnumerator SpawnerForStart()
     {
+        Debug.Log("StartCoroutine");
+        yield return new WaitUntil(() => isMove == true);
         yield return new WaitUntil(() => isMove == false);
 
-        while (isRunning)
-        {
-            if (Timeleft == 9f)
-                QuestionSpawner();
+        Debug.Log("Finish moving");
+        
+        yield return new WaitForSeconds(0.5f);
 
-            if (Timeleft == 5f)
-                SadSpawner();
+        yield return new WaitForSeconds(4f);
+        QuestionSpawner();
 
-            if (Timeleft == 3f)
-                AngrySpawner();
-        }
+        yield return new WaitForSeconds(4f);
+        SadSpawner();
+
+        yield return new WaitForSeconds(2f);
+        AngrySpawner();
+
+        yield return new WaitForSeconds(3f);  
+    }
+
+    IEnumerator Spawner()
+    {
+        Debug.Log("Start Spawner!!");
+        
+        yield return new WaitForSeconds(6f);
+        QuestionSpawner();
+
+        yield return new WaitForSeconds(4f);
+        SadSpawner();
+
+        yield return new WaitForSeconds(2f);
+        AngrySpawner();
+
+        yield return new WaitForSeconds(3f);
     }
 
     void QuestionSpawner()

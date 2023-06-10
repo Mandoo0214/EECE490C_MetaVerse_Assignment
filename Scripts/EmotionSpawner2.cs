@@ -8,38 +8,88 @@ public class EmotionSpawner2 : MonoBehaviour
     public GameObject C;
     public GameObject S;
 
-    bool isMove2 = NPC_animator2.IsMove2;
+    float Timeleft2 = gameflow.orderTimer[2];
 
-    float Timeleft = gameflow.orderTimer[0];
+    float tempTimer2;
+
+    bool isMove2 = NPC_animator2.IsMove2;
 
     public Transform target;
 
+    private Coroutine startC2 = null;
+    private Coroutine normalC2 = null;
+    
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine("Spawner", true);
+        Debug.Log("222Start");
+        tempTimer2 = 0f;
+        startC2 = StartCoroutine("SpawnerForStart");
     }
 
     // Update is called once per frame
     void Update()
     {
+        tempTimer2 += Time.deltaTime;
+        
+        if((tempTimer2 >= 1.5f) && (Timeleft2 == 15f) && (!isMove2))
+        {
+            Debug.Log("222Reset Timer");
+
+            StopCoroutine(startC2);
+            Debug.Log("222Stop startC");
+
+            if(normalC2 == null)
+            {
+                Debug.Log("222Start new normalC");
+                normalC2 = StartCoroutine("Spawner");
+            }
+            
+            else
+            {
+                Debug.Log("222Start normalC again");
+                StopCoroutine(normalC2);
+                normalC2 = StartCoroutine("Spawner");
+            }
+        }
+    }
+
+    IEnumerator SpawnerForStart()
+    {
+        Debug.Log("222StartCoroutine");
+        yield return new WaitForSeconds(0.5f);
+        yield return new WaitUntil(() => isMove2 == false);
+
+        Debug.Log("222Finish moving");
+        
+        yield return new WaitForSeconds(0.5f);
+
+        yield return new WaitForSeconds(5f);
+        QuestionSpawner();
+
+        yield return new WaitForSeconds(4f);
+        SadSpawner();
+
+        yield return new WaitForSeconds(2f);
+        AngrySpawner();
+
+        yield return new WaitForSeconds(3f);  
     }
 
     IEnumerator Spawner(bool isRunning)
     {
-        yield return new WaitUntil(() => isMove2 == false);
+        Debug.Log("222Start Spawner!!");
+        
+        yield return new WaitForSeconds(6f);
+        QuestionSpawner();
 
-        while (isRunning)
-        {
-            if (Timeleft == 9f)
-                QuestionSpawner();
+        yield return new WaitForSeconds(4f);
+        SadSpawner();
 
-            if (Timeleft == 5f)
-                SadSpawner();
+        yield return new WaitForSeconds(2f);
+        AngrySpawner();
 
-            if (Timeleft == 3f)
-                AngrySpawner();
-        }
+        yield return new WaitForSeconds(3f);
     }
 
     void QuestionSpawner()
@@ -59,4 +109,5 @@ public class EmotionSpawner2 : MonoBehaviour
         GameObject Angry = Instantiate(A, target.position, target.rotation);
         Destroy(Angry, 1.5f);
     }
+
 }
