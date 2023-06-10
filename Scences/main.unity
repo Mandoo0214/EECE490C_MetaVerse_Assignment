@@ -5994,6 +5994,10 @@ PrefabInstance:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6885284822560472570, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
 --- !u!4 &386551603 stripped
@@ -11528,7 +11532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &703379705
 Transform:
   m_ObjectHideFlags: 0
@@ -21060,6 +21064,7 @@ GameObject:
   - component: {fileID: 1240547404}
   - component: {fileID: 1240515858}
   - component: {fileID: 1240617999}
+  - component: {fileID: 1240618001}
   m_Layer: 0
   m_Name: OVRPlayerController
   m_TagString: Untagged
@@ -21467,14 +21472,13 @@ MonoBehaviour:
   grabbedLayer:
     serializedVersion: 2
     m_Bits: 8
-  grabRange: 1.5
+  grabRange: 0.2
   Squid: {fileID: 1898105546038498273, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
   Kohada: {fileID: 3300783062014867410, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
   Ebi: {fileID: 2826252549101449445, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
   Tuna: {fileID: 8909130684441029255, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
   Salmon: {fileID: 8218828651626065135, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
   Rice: {fileID: 3822272386673814624, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
-  throwPower: 10
 --- !u!114 &1240618000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21490,6 +21494,28 @@ MonoBehaviour:
   usePerEyeCameras: 0
   useFixedUpdateForTracking: 0
   disableEyeAnchorCameras: 0
+--- !u!114 &1240618001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230905836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a41e2ed192976434f80a7f345e44c93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grabbedLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  grabRange: 0.2
+  Squid: {fileID: 1898105546038498273, guid: 8d47b3f8d9594a348895689a082021e3, type: 3}
+  Kohada: {fileID: 3300783062014867410, guid: 86a67c43a3cc2a847b983de08008d682, type: 3}
+  Ebi: {fileID: 2826252549101449445, guid: 0a36ffd7e865f1444b177dd79149fa7a, type: 3}
+  Tuna: {fileID: 8909130684441029255, guid: c3391e5b7de1d6e4385a26af8ddf3e2e, type: 3}
+  Salmon: {fileID: 8218828651626065135, guid: d713336c3cd806a41ab86adb2ce26c0f, type: 3}
+  Rice: {fileID: 3822272386673814624, guid: b2eee4f2a63d60b4a87c93bb741bc255, type: 3}
 --- !u!1001 &1250332955
 PrefabInstance:
   m_ObjectHideFlags: 0
