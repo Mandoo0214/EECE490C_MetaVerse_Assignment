@@ -54,7 +54,7 @@ public class EmotionSpawner : MonoBehaviour
             alreadyhave = false;
             Destroy(Sad);
         }
-        else if (gameflow.orderTimer[0] <= 5f)
+        else if (gameflow.orderTimer[0] <= 6f)
         {
             if (alreadyhave)
             { }
@@ -65,12 +65,12 @@ public class EmotionSpawner : MonoBehaviour
             }
             
         }
-        else if (gameflow.orderTimer[0] <= 6f)
+        else if (gameflow.orderTimer[0] <= 7f)
         {
             alreadyhave = false;
             Destroy(Curious);
         }
-        else if (gameflow.orderTimer[0] <= 9f)
+        else if (gameflow.orderTimer[0] <= 10f)
         {
             if (alreadyhave)
             { }
