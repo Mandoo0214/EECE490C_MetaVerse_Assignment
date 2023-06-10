@@ -8,6 +8,13 @@ public class EmotionSpawner : MonoBehaviour
     public GameObject C;
     public GameObject S;
 
+    GameObject Angury;
+    GameObject Sad;
+    GameObject Curious;
+
+    bool alreadyhave = false;
+
+
     float Timeleft = gameflow.orderTimer[0];
 
     float tempTimer;
@@ -21,92 +28,67 @@ public class EmotionSpawner : MonoBehaviour
     
     // Start is called before the first frame update
     void Start()
-    {
-        Debug.Log("Start");
-        tempTimer = 0f;
-        startC = StartCoroutine("SpawnerForStart");
-    }
+    { }
 
     // Update is called once per frame
     void Update()
     {
-        tempTimer += Time.deltaTime;
-
-        if((tempTimer >= 10f) && (Timeleft >= 14.98f) && (!isMove))
+        if (gameflow.orderTimer[0] <= 1f)
         {
-            Debug.Log("Reset Timer");
-
-            StopCoroutine(startC);
-            Debug.Log("Stop startC");
-
-            if(normalC == null)
-            {
-                Debug.Log("Start new normalC");
-                normalC = StartCoroutine("Spawner");
-            }
-            
+            alreadyhave = false;
+            Destroy(Angury);
+        }
+        else if (gameflow.orderTimer[0] <= 3f)
+        {
+            if(alreadyhave)
+            { }
             else
             {
-                Debug.Log("Start normalC again");
-                StopCoroutine(normalC);
-                normalC = StartCoroutine("Spawner");
+                Angury = Instantiate(A, target.position, target.rotation);
+                alreadyhave = true;
             }
+            
         }
+        else if (gameflow.orderTimer[0] <= 4f)
+        {
+            alreadyhave = false;
+            Destroy(Sad);
+        }
+        else if (gameflow.orderTimer[0] <= 5f)
+        {
+            if (alreadyhave)
+            { }
+            else
+            {
+                Sad = Instantiate(S, target.position, target.rotation);
+                alreadyhave = true;
+            }
+            
+        }
+        else if (gameflow.orderTimer[0] <= 6f)
+        {
+            alreadyhave = false;
+            Destroy(Curious);
+        }
+        else if (gameflow.orderTimer[0] <= 9f)
+        {
+            if (alreadyhave)
+            { }
+            else
+            {
+                Curious = Instantiate(C, target.position, target.rotation);
+                alreadyhave = true;
+            }
+            
+        }
+        else
+        {
+            Destroy(Curious);
+            Destroy(Angury);
+            Destroy(Sad);
+            alreadyhave = false;
+        }
+
     }
 
-    IEnumerator SpawnerForStart()
-    {
-        Debug.Log("StartCoroutine");
-        yield return new WaitUntil(() => isMove == true);
-        yield return new WaitUntil(() => isMove == false);
-
-        Debug.Log("Finish moving");
-        
-        yield return new WaitForSeconds(0.5f);
-
-        yield return new WaitForSeconds(4f);
-        QuestionSpawner();
-
-        yield return new WaitForSeconds(4f);
-        SadSpawner();
-
-        yield return new WaitForSeconds(2f);
-        AngrySpawner();
-
-        yield return new WaitForSeconds(3f);  
-    }
-
-    IEnumerator Spawner()
-    {
-        Debug.Log("Start Spawner!!");
-        
-        yield return new WaitForSeconds(6f);
-        QuestionSpawner();
-
-        yield return new WaitForSeconds(4f);
-        SadSpawner();
-
-        yield return new WaitForSeconds(2f);
-        AngrySpawner();
-
-        yield return new WaitForSeconds(3f);
-    }
-
-    void QuestionSpawner()
-    {
-        GameObject Curious = Instantiate(C, target.position, target.rotation);
-        Destroy(Curious, 1.5f);
-    }
-
-    void SadSpawner()
-    {
-        GameObject Sad = Instantiate(S, target.position, target.rotation);
-        Destroy(Sad, 1.5f);
-    }
-
-    void AngrySpawner()
-    {
-        GameObject Angry = Instantiate(A, target.position, target.rotation);
-        Destroy(Angry, 1.5f);
-    }
 }

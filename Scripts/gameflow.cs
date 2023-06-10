@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class gameflow : MonoBehaviour
 {
-    public static int [] orderValue= { 0,0,0};
-    public static int [] plateValue = { 0,0,0};
-    public static float[] orderTimer = { 15, 15, 15 };
-    private int [] randomOrder= { 0, 0, 0 };
+    public static float MaxTimer = 15;
+
+    public static int[] orderValue = { 0, 0, 0 };
+    public static int[] plateValue = { 0, 0, 0 };
+    public static float[] orderTimer = { MaxTimer, MaxTimer, MaxTimer };
+    private int[] randomOrder = { 0, 0, 0 };
     public static int missnum = 0;
 
     public static int plateNum = 0;
@@ -71,7 +73,7 @@ public class gameflow : MonoBehaviour
             orderValue[2] = 100100;
 
 
-        for(int rep=0; rep<3; rep+=1)
+        for (int rep = 0; rep < 3; rep += 1)
         {
             if (orderValue[rep] == 110000)
                 currentPic[rep].GetComponent<Image>().sprite = orderPics[0];
@@ -93,43 +95,43 @@ public class gameflow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("tab")|| ARAVRInput.GetDown(ARAVRInput.Button.One))
+        if (Input.GetKeyDown("tab") || ARAVRInput.GetDown(ARAVRInput.Button.One))
         {
             plateNum += 1;
             plateZpos -= (float)0.5;
 
-            if(plateNum>2)
+            if (plateNum > 2)
             {
                 plateNum = 0;
                 plateZpos = (float)0.229;
             }
         }
 
-        if(!NPC_animator.IsMove)
+        if (!NPC_animator.IsMove)
         {
             orderTimer[0] -= Time.deltaTime;
         }
 
-        if(!NPC_animator1.IsMove1)
+        if (!NPC_animator1.IsMove1)
         {
             orderTimer[1] -= Time.deltaTime;
         }
-        
-        if(!NPC_animator2.IsMove2)
+
+        if (!NPC_animator2.IsMove2)
         {
             orderTimer[2] -= Time.deltaTime;
         }
 
-        if(orderTimer[0]<=0)
+        if (orderTimer[0] <= 0)
         {
-            if(orderValue[0]!=plateValue[0])
+            if (orderValue[0] != plateValue[0])
             {
-               missnum += 1;
+                missnum += 1;
             }
 
             plateValue[0] = 0;//reset plate
 
-            orderTimer[0] = 15; //reset Timer
+            orderTimer[0] = MaxTimer; //reset Timer
 
             randomOrder[0] = Random.Range(1, 6);
 
@@ -163,7 +165,7 @@ public class gameflow : MonoBehaviour
                 currentPic[0].GetComponent<Image>().sprite = orderPics[4];
         }
 
-        if(orderTimer[1]<=0)
+        if (orderTimer[1] <= 0)
         {
             if (orderValue[1] != plateValue[1])
             {
@@ -171,7 +173,7 @@ public class gameflow : MonoBehaviour
             }
 
             plateValue[1] = 0;//reset plate
-            orderTimer[1] = 15; //reset Timer
+            orderTimer[1] = MaxTimer; //reset Timer
 
             randomOrder[1] = Random.Range(1, 6);
 
@@ -205,7 +207,7 @@ public class gameflow : MonoBehaviour
                 currentPic[1].GetComponent<Image>().sprite = orderPics[4];
         }
 
-        if(orderTimer[2]<=0)
+        if (orderTimer[2] <= 0)
         {
             if (orderValue[2] != plateValue[2])
             {
@@ -214,7 +216,7 @@ public class gameflow : MonoBehaviour
 
             plateValue[2] = 0;//reset plate
 
-            orderTimer[2] = 15; //reset Timer
+            orderTimer[2] = MaxTimer; //reset Timer
 
             randomOrder[2] = Random.Range(1, 6);
 
