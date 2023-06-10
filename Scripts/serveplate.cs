@@ -9,7 +9,7 @@ public class serveplate : MonoBehaviour
 
     public AudioSource correctAudio;
     public AudioSource wrongAudio;
-
+    public static int servedSushi = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +26,7 @@ public class serveplate : MonoBehaviour
             //success sound
             correctAudio.Stop();
             correctAudio.Play();
-
+            servedSushi += 1;
             //when specialorder
             if(gameflow.specialOrder[gameflow.plateNum]==0)
             {
