@@ -26,5 +26,18 @@ public class TimerManager : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameClear");
         }
+
+        if(time<=120)
+        {
+            gameflow.MaxTimer = 25;
+        }
+        else if(time<=60)
+        {
+            gameflow.MaxTimer = 20;
+        }
+        else if(time<=30)
+        {
+            gameflow.MaxTimer = 15;
+        }
     }
 }

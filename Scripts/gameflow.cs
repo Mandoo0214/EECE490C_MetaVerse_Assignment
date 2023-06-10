@@ -11,6 +11,7 @@ public class gameflow : MonoBehaviour
     public static int[] plateValue = { 0, 0, 0 };
     public static float[] orderTimer = { MaxTimer, MaxTimer, MaxTimer };
     private int[] randomOrder = { 0, 0, 0 };
+    public static int[] specialOrder = { 1,1,1};
     public static int missnum = 0;
 
     public static int plateNum = 0;
@@ -133,6 +134,7 @@ public class gameflow : MonoBehaviour
 
             orderTimer[0] = MaxTimer; //reset Timer
 
+            specialOrder[0] = Random.Range(0,9);
             randomOrder[0] = Random.Range(1, 6);
 
             if (randomOrder[0] == 1)
@@ -149,20 +151,41 @@ public class gameflow : MonoBehaviour
                 orderValue[0] = 100100;
 
             //set the new picture
-            if (orderValue[0] == 110000)
-                currentPic[0].GetComponent<Image>().sprite = orderPics[0];
+            if (specialOrder[0] == 0)
+            {
+                if (orderValue[0] == 110000)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[5];
 
-            if (orderValue[0] == 101000)
-                currentPic[0].GetComponent<Image>().sprite = orderPics[1];
+                if (orderValue[0] == 101000)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[6];
 
-            if (orderValue[0] == 100100)
-                currentPic[0].GetComponent<Image>().sprite = orderPics[2];
+                if (orderValue[0] == 100100)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[7];
 
-            if (orderValue[0] == 100010)
-                currentPic[0].GetComponent<Image>().sprite = orderPics[3];
+                if (orderValue[0] == 100010)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[8];
 
-            if (orderValue[0] == 100001)
-                currentPic[0].GetComponent<Image>().sprite = orderPics[4];
+                if (orderValue[0] == 100001)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[9];
+            }
+            else
+            {
+                if (orderValue[0] == 110000)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[0];
+
+                if (orderValue[0] == 101000)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[1];
+
+                if (orderValue[0] == 100100)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[2];
+
+                if (orderValue[0] == 100010)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[3];
+
+                if (orderValue[0] == 100001)
+                    currentPic[0].GetComponent<Image>().sprite = orderPics[4];
+            }
+            
         }
 
         if (orderTimer[1] <= 0)
@@ -176,6 +199,7 @@ public class gameflow : MonoBehaviour
             orderTimer[1] = MaxTimer; //reset Timer
 
             randomOrder[1] = Random.Range(1, 6);
+            specialOrder[1] = Random.Range(0, 9);
 
             if (randomOrder[1] == 1)
                 orderValue[1] = 110000;
@@ -191,20 +215,41 @@ public class gameflow : MonoBehaviour
                 orderValue[1] = 101000;
 
             //set the new picture
-            if (orderValue[1] == 110000)
-                currentPic[1].GetComponent<Image>().sprite = orderPics[0];
+            if(specialOrder[1]==0)
+            {
+                if (orderValue[1] == 110000)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[5];
 
-            if (orderValue[1] == 101000)
-                currentPic[1].GetComponent<Image>().sprite = orderPics[1];
+                if (orderValue[1] == 101000)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[6];
 
-            if (orderValue[1] == 100100)
-                currentPic[1].GetComponent<Image>().sprite = orderPics[2];
+                if (orderValue[1] == 100100)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[7];
 
-            if (orderValue[1] == 100010)
-                currentPic[1].GetComponent<Image>().sprite = orderPics[3];
+                if (orderValue[1] == 100010)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[8];
 
-            if (orderValue[1] == 100001)
-                currentPic[1].GetComponent<Image>().sprite = orderPics[4];
+                if (orderValue[1] == 100001)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[9];
+            }
+            else
+            {
+                if (orderValue[1] == 110000)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[0];
+
+                if (orderValue[1] == 101000)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[1];
+
+                if (orderValue[1] == 100100)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[2];
+
+                if (orderValue[1] == 100010)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[3];
+
+                if (orderValue[1] == 100001)
+                    currentPic[1].GetComponent<Image>().sprite = orderPics[4];
+            }
+            
         }
 
         if (orderTimer[2] <= 0)
@@ -219,6 +264,7 @@ public class gameflow : MonoBehaviour
             orderTimer[2] = MaxTimer; //reset Timer
 
             randomOrder[2] = Random.Range(1, 6);
+            specialOrder[2] = Random.Range(0, 9);
 
             if (randomOrder[2] == 1)
                 orderValue[2] = 110000;
@@ -234,20 +280,41 @@ public class gameflow : MonoBehaviour
                 orderValue[2] = 100100;
 
             //set the new picture
-            if (orderValue[2] == 110000)
-                currentPic[2].GetComponent<Image>().sprite = orderPics[0];
+            if(specialOrder[2]==0)
+            {
+                if (orderValue[2] == 110000)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[5];
 
-            if (orderValue[2] == 101000)
-                currentPic[2].GetComponent<Image>().sprite = orderPics[1];
+                if (orderValue[2] == 101000)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[6];
 
-            if (orderValue[2] == 100100)
-                currentPic[2].GetComponent<Image>().sprite = orderPics[2];
+                if (orderValue[2] == 100100)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[7];
 
-            if (orderValue[2] == 100010)
-                currentPic[2].GetComponent<Image>().sprite = orderPics[3];
+                if (orderValue[2] == 100010)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[8];
 
-            if (orderValue[2] == 100001)
-                currentPic[2].GetComponent<Image>().sprite = orderPics[4];
+                if (orderValue[2] == 100001)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[9];
+            }
+            else
+            {
+                if (orderValue[2] == 110000)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[0];
+
+                if (orderValue[2] == 101000)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[1];
+
+                if (orderValue[2] == 100100)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[2];
+
+                if (orderValue[2] == 100010)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[3];
+
+                if (orderValue[2] == 100001)
+                    currentPic[2].GetComponent<Image>().sprite = orderPics[4];
+            }
+            
         }
 
         //set the position of plateSelector

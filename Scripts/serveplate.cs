@@ -27,6 +27,20 @@ public class serveplate : MonoBehaviour
             correctAudio.Stop();
             correctAudio.Play();
 
+            //when specialorder
+            if(gameflow.specialOrder[gameflow.plateNum]==0)
+            {
+                if(gameflow.missnum==0)
+                {
+                    gameflow.missnum = 0;
+                }
+                else
+                {
+                    gameflow.missnum -= 1;
+                }
+                
+            }
+
             //reset values
             //gameflow.plateValue[gameflow.plateNum] = 0;
             gameflow.orderTimer[gameflow.plateNum] = 0;
