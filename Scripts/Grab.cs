@@ -59,27 +59,27 @@ public class Grab : MonoBehaviour
             {
                 isGrabbingR = true;
                 Vector3 spotPos = ARAVRInput.RHandPosition;
-                if (hitObjects[closest].gameObject.name == "Ebi_sashimi(Clone)")
+                if (hitObjects[closest].gameObject.name == "Ebi_button")
                 {
                     grabbedObjectR = Instantiate(Ebi, spotPos, Ebi.transform.rotation);
                 }
-                else if (hitObjects[closest].gameObject.name == "Salmon_sashimi(Clone)")
+                else if (hitObjects[closest].gameObject.name == "Salmon_button")
                 {
                     grabbedObjectR = Instantiate(Salmon, spotPos, Salmon.transform.rotation);
                 }
-                else if (hitObjects[closest].gameObject.name == "Tuna_sashimi(Clone)")
+                else if (hitObjects[closest].gameObject.name == "Tuna_button")
                 {
                     grabbedObjectR = Instantiate(Tuna, spotPos, Tuna.transform.rotation);
                 }
-                else if (hitObjects[closest].gameObject.name == "Squid_sashimi(Clone)")
+                else if (hitObjects[closest].gameObject.name == "Squid_button")
                 {
                     grabbedObjectR = Instantiate(Squid, spotPos, Squid.transform.rotation);
                 }
-                else if (hitObjects[closest].gameObject.name == "Kohada_sashimi(Clone)")
+                else if (hitObjects[closest].gameObject.name == "Kohada_button")
                 {
                     grabbedObjectR = Instantiate(Kohada, spotPos, Kohada.transform.rotation);
                 }
-                else if (hitObjects[closest].gameObject.name == "Sashimi_rice(Clone)")
+                else if (hitObjects[closest].gameObject.name == "Rice_button")
                 {
                     grabbedObjectR = Instantiate(Rice, spotPos, Rice.transform.rotation);
                 }
