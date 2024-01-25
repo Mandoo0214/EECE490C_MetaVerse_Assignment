@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sushi_Gizzard_Shad Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 6172792021757973075, guid: c1ec55fc2218ad743ab0c6871f61a3f1, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1ec55fc2218ad743ab0c6871f61a3f1, type: 3}
 --- !u!1 &8577499126513949976 stripped
