@@ -23,7 +23,7 @@ public class clickplace : MonoBehaviour
     {
         if (gameObject.name == "Rice_button")
         {
-            Instantiate(cloneObj, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
+            Instantiate(cloneObj, new Vector3((float)-2.7, (float)1.991, gameflow.plateZpos), cloneObj.rotation);
             Debug.Log("I will make Rice!!");
         }
 

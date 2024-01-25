@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 3822272386670653536}
   - component: {fileID: 3822272386671620768}
   - component: {fileID: 6885284822560472570}
-  - component: {fileID: 5978649924237556606}
   - component: {fileID: 2680792514852905308}
   - component: {fileID: 4709865551092565993}
+  - component: {fileID: 2476998343233560104}
   m_Layer: 0
   m_Name: Sashimi_rice
   m_TagString: Untagged
@@ -102,22 +102,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 86b349cddffe8644b99a4ac50e8f41bc, type: 3}
---- !u!54 &5978649924237556606
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3822272386673814624}
-  serializedVersion: 2
-  m_Mass: 5
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &2680792514852905308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,6 +136,22 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!54 &2476998343233560104
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3822272386673814624}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7239098390590768114
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +308,7 @@ MeshCollider:
   m_GameObject: {fileID: 7849298318931405801}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -323,6 +323,10 @@ PrefabInstance:
     - target: {fileID: 14813080029605459, guid: 45501d9d248414b459d4c2853e955903, type: 3}
       propertyPath: m_Convex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14813080029605459, guid: 45501d9d248414b459d4c2853e955903, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2838441456706934689, guid: 45501d9d248414b459d4c2853e955903, type: 3}
       propertyPath: m_RootOrder
