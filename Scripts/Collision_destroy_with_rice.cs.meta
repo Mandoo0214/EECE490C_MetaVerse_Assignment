@@ -3,7 +3,12 @@ guid: 0e694b0a46bb3ab47ac88f89b6815e5e
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Squid: {fileID: 4372994838587916732, guid: 3ad0203c4b940fe459925f1f65a9600f, type: 3}
+  - Kohada: {fileID: 4372994838587916732, guid: 8c077e94a8d40124d9499ef10d73ec82, type: 3}
+  - Ebi: {fileID: 4372994838587916732, guid: e56c9aff33d24e546bef97de401a4d04, type: 3}
+  - Tuna: {fileID: 4372994838587916732, guid: 6a6df9c3d5ec9994b88a6713cb9e0ac8, type: 3}
+  - Salmon: {fileID: 4372994838587916732, guid: 524fc94ecb2a3884a8ae0d2679e8971d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
