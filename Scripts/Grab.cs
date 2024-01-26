@@ -103,7 +103,7 @@ public class Grab : MonoBehaviour
                 }
                 else if (hitObjects[closest].gameObject.name == "Rice_button")
                 {
-                    grabbedObjectR = Instantiate(Rice, new Vector3((float)-2.7, (float)1.991, gameflow.plateZpos), Rice.transform.rotation);
+                    grabbedObjectR = Instantiate(Rice, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Rice.transform.rotation);
                 }
                 //grabbedObject = hitObjects[closest].gameObject;
                 //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
@@ -157,7 +157,7 @@ public class Grab : MonoBehaviour
                 }
                 else if (hitObjects[closest].gameObject.name == "Rice_button")
                 {
-                    grabbedObjectL = Instantiate(Rice, new Vector3((float)-2.7, (float)1.991, gameflow.plateZpos), Rice.transform.rotation);
+                    grabbedObjectL = Instantiate(Rice, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Rice.transform.rotation);
                 }
                 //grabbedObject = hitObjects[closest].gameObject;
                 //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
