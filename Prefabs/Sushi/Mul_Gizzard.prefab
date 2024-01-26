@@ -248,6 +248,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4372994838587916733}
     m_Modifications:
+    - target: {fileID: 1209761246423238894, guid: 265c7f0b770c4c9478931942234629fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3300783062014634994, guid: 265c7f0b770c4c9478931942234629fc, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -443,6 +447,10 @@ PrefabInstance:
     - target: {fileID: 3300783062014867410, guid: 265c7f0b770c4c9478931942234629fc, type: 3}
       propertyPath: m_Name
       value: Kohada_sashimi
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645465796635442655, guid: 265c7f0b770c4c9478931942234629fc, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 265c7f0b770c4c9478931942234629fc, type: 3}
