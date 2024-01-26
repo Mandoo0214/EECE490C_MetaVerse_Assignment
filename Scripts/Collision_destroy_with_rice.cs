@@ -27,7 +27,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
 
         if (col.gameObject.name == "Tuna_sashimi(Clone)")
         {
-            Destroy(DestroyRice);
+            Destroy(DestroyRice) ;
             Destroy(this);
             Destroy(col.gameObject);
             gameflow.plateValue[gameflow.plateNum] = (100000+100);
