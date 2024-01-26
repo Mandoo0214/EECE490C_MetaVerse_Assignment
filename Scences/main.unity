@@ -11215,7 +11215,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &778242890
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11232,7 +11232,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &778242891
 Transform:
   m_ObjectHideFlags: 0
@@ -26990,16 +26991,16 @@ MonoBehaviour:
   - {fileID: 7237563674054153936}
   - {fileID: 7237563673929603157}
   orderPics:
-  - {fileID: 21300000, guid: 2af72409d1a8ffe4fbd790b24f40d4af, type: 3}
-  - {fileID: 21300000, guid: 4112acba06cadb945ba9e97c33de1b61, type: 3}
-  - {fileID: 21300000, guid: 6a95db065f56cd245a3b9b622f4dab54, type: 3}
-  - {fileID: 21300000, guid: 05e8107ec1f890a46b4d8e5bcce0a5c2, type: 3}
-  - {fileID: 21300000, guid: 857332399b990054ca5226216e226722, type: 3}
-  - {fileID: 21300000, guid: 43139def8d268b74aa53a1222517de53, type: 3}
-  - {fileID: 21300000, guid: 876f59281f603904b8f03bfd3328fbc6, type: 3}
-  - {fileID: 21300000, guid: faedb313d8e9f684086512bb0cfb9bd7, type: 3}
-  - {fileID: 21300000, guid: e7d411a25ca69a34686c567096f1bcd2, type: 3}
-  - {fileID: 21300000, guid: c8fe7be7270538945838c2658ddc8630, type: 3}
+  - {fileID: 21300000, guid: 2c8de61507f718143acd19f995afc664, type: 3}
+  - {fileID: 21300000, guid: 96b5ad3efe384234f85611d71c485dc5, type: 3}
+  - {fileID: 21300000, guid: 3abb9e8ff7c5e464fa8fbfded5b289b9, type: 3}
+  - {fileID: 21300000, guid: 7c6705d06606cb94cb19bdd6dce4995e, type: 3}
+  - {fileID: 21300000, guid: f1aeda450711d8f488421ab5f17c56d2, type: 3}
+  - {fileID: 21300000, guid: 02632490865e4f8429b15dd27baa5ae6, type: 3}
+  - {fileID: 21300000, guid: 2e6a3c5632f50d94b964cf6c40eb75b0, type: 3}
+  - {fileID: 21300000, guid: 2dfd37db378cbc447aabe07a6899b1a7, type: 3}
+  - {fileID: 21300000, guid: 205a4f97399b1594eb1b72be2375a896, type: 3}
+  - {fileID: 21300000, guid: 22255aef04909784fb9c4cf3b9451b3f, type: 3}
 --- !u!4 &1795641457
 Transform:
   m_ObjectHideFlags: 0
@@ -29138,7 +29139,7 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1955786263
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -29155,7 +29156,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1960110815
 GameObject:
   m_ObjectHideFlags: 0
@@ -32532,7 +32534,7 @@ GameObject:
   m_IsActive: 1
 --- !u!95 &3629172223264703004
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -32549,7 +32551,8 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &3629172223264703005
 MonoBehaviour:
   m_ObjectHideFlags: 0
