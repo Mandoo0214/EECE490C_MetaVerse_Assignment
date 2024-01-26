@@ -83,27 +83,27 @@ public class Grab : MonoBehaviour
                 Vector3 spotPosR = new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos + (float)0.07);
                 if (hitObjects[closest].gameObject.name == "Ebi_button")
                 {
-                    grabbedObjectR = Instantiate(Ebi, spotPos, Ebi.transform.rotation);
+                    grabbedObjectR = Instantiate(Ebi, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Ebi.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Salmon_button")
                 {
-                    grabbedObjectR = Instantiate(Salmon, spotPos, Salmon.transform.rotation);
+                    grabbedObjectR = Instantiate(Salmon, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Salmon.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Tuna_button")
                 {
-                    grabbedObjectR = Instantiate(Tuna, spotPos, Tuna.transform.rotation);
+                    grabbedObjectR = Instantiate(Tuna, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Tuna.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Squid_button")
                 {
-                    grabbedObjectR = Instantiate(Squid, spotPos, Squid.transform.rotation);
+                    grabbedObjectR = Instantiate(Squid, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Squid.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Kohada_button")
                 {
-                    grabbedObjectR = Instantiate(Kohada, spotPos, Kohada.transform.rotation);
+                    grabbedObjectR = Instantiate(Kohada, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Kohada.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Rice_button")
                 {
-                    grabbedObjectR = Instantiate(Rice, spotPosR, Rice.transform.rotation);
+                    grabbedObjectR = Instantiate(Rice, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Rice.transform.rotation);
                 }
                 //grabbedObject = hitObjects[closest].gameObject;
                 //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
@@ -137,27 +137,27 @@ public class Grab : MonoBehaviour
                 Vector3 spotPosR = new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos + (float)0.07);
                 if (hitObjects[closest].gameObject.name == "Ebi_button")
                 {
-                    grabbedObjectL = Instantiate(Ebi, spotPos, Ebi.transform.rotation);
+                    grabbedObjectL = Instantiate(Ebi, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Ebi.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Salmon_button")
                 {
-                    grabbedObjectL = Instantiate(Salmon, spotPos, Salmon.transform.rotation);
+                    grabbedObjectL = Instantiate(Salmon, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Salmon.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Tuna_button")
                 {
-                    grabbedObjectL = Instantiate(Tuna, spotPos, Tuna.transform.rotation);
+                    grabbedObjectL = Instantiate(Tuna, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Tuna.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Squid_button")
                 {
-                    grabbedObjectL = Instantiate(Squid, spotPos, Squid.transform.rotation);
+                    grabbedObjectL = Instantiate(Squid, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Squid.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Kohada_button")
                 {
-                    grabbedObjectL = Instantiate(Kohada, spotPos, Kohada.transform.rotation);
+                    grabbedObjectL = Instantiate(Kohada, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Kohada.transform.rotation);
                 }
                 else if (hitObjects[closest].gameObject.name == "Rice_button")
                 {
-                    grabbedObjectL = Instantiate(Rice, spotPosR, Rice.transform.rotation);
+                    grabbedObjectL = Instantiate(Rice, new Vector3((float)-2.651, (float)1.991, gameflow.plateZpos), Rice.transform.rotation);
                 }
                 //grabbedObject = hitObjects[closest].gameObject;
                 //grabbedObjectR.GetComponent<Rigidbody>().isKinematic = true;
