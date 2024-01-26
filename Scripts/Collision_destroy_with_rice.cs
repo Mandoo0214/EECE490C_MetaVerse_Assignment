@@ -35,7 +35,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(this);
             Destroy(col.gameObject);
             gameflow.plateValue[gameflow.plateNum] = (100000+100);
-            GameObject TunaSushi = Instantiate(Tuna, new Vector3((float)-2.3, (float)1.991, gameflow.plateZpos), Tuna.transform.rotation);
+            GameObject TunaSushi = Instantiate(Tuna, new Vector3((float)-2.3, (float)1.68, gameflow.plateZpos), Tuna.transform.rotation);
             Destroy(TunaSushi,3);
         }
 
@@ -45,7 +45,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(this);
             Destroy(col.gameObject);
             gameflow.plateValue[gameflow.plateNum] = (100000 + 10000);
-            GameObject EbiSushi = Instantiate(Ebi, new Vector3((float)-2.3, (float)1.791, gameflow.plateZpos), Ebi.transform.rotation);
+            GameObject EbiSushi = Instantiate(Ebi, new Vector3((float)-2.3, (float)1.68, gameflow.plateZpos), Ebi.transform.rotation);
             Destroy(EbiSushi, 3);
         }
 
@@ -55,7 +55,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(this);
             Destroy(col.gameObject);
             gameflow.plateValue[gameflow.plateNum] = (100000 + 1);
-            GameObject SquidSushi =Instantiate(Squid, new Vector3((float)-2.3, (float)1.791, gameflow.plateZpos), Squid.transform.rotation);
+            GameObject SquidSushi =Instantiate(Squid, new Vector3((float)-2.3, (float)1.68, gameflow.plateZpos), Squid.transform.rotation);
             Destroy(SquidSushi, 3);
         }
 
@@ -65,7 +65,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(this);
             Destroy(col.gameObject);
             gameflow.plateValue[gameflow.plateNum] = (100000 + 10);
-            GameObject KohadaSushi = Instantiate(Kohada, new Vector3((float)-2.3, (float)1.791, gameflow.plateZpos), Kohada.transform.rotation);
+            GameObject KohadaSushi = Instantiate(Kohada, new Vector3((float)-2.3, (float)1.68, gameflow.plateZpos), Kohada.transform.rotation);
             Destroy(KohadaSushi, 3);
         }
 
@@ -75,7 +75,7 @@ public class Collision_destroy_with_rice : MonoBehaviour
             Destroy(this);
             Destroy(col.gameObject);
             gameflow.plateValue[gameflow.plateNum] = (100000 + 1000);
-            GameObject SalmonSushi = Instantiate(Salmon, new Vector3((float)-2.3, (float)1.791, gameflow.plateZpos), Salmon.transform.rotation);
+            GameObject SalmonSushi = Instantiate(Salmon, new Vector3((float)-2.3, (float)1.68, gameflow.plateZpos), Salmon.transform.rotation);
             Destroy(SalmonSushi, 3);
         }
     }
